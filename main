@@ -1,0 +1,29 @@
+#include <iostream>
+#include "LinkedDouble.cpp"
+#include "Vase.h"
+
+using namespace std;
+int main() {
+
+
+    LinkedDouble<Vase>* vase = new LinkedDouble<Vase>();
+    vase->addNodeFirst(Vase("1", "Ceramica", "Rojo", "Grande"));
+    vase->addNodeFirst(Vase("2", "Vidrio", "Verde", "Mediano"));
+    vase->addNodeFirst(Vase("3", "Ceramica", "Amarillo", "Mediano"));
+    vase->addNodeFirst(Vase("4", "Plastico", "Azul", "Pequeño"));
+
+    for (Vase vase1 : vase->getList(true)){
+        cout<<vase1<<endl;
+    }
+   
+   /* LinkedDouble<Vase> *vaseOther = new LinkedDouble<Vase>();
+    vaseOther->addNodeLast(Vase("5", "Ceramica", "Rojo", "Grande"));
+    vaseOther->addNodeLast(Vase("7", "Vidrio", "Verde", "Mediano"));
+    vaseOther->addNodeLast(Vase("23", "Ceramica", "Amarillo", "Mediano"));
+    vaseOther->addNodeLast(Vase("8", "Plastico", "Azul", "Pequeño"));
+
+    for (Vase vase1 : vaseOther->getList(false)){
+        cout<<vase1<<endl;
+    }*/
+    return EXIT_SUCCESS;
+}
